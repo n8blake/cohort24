@@ -1,0 +1,83 @@
+$slammin-salmon: #F7525F;
+$dark-red : #720618;
+$light-pink : #DDB8AC;
+$red: #D82900;
+
+$orange : #FF8E06;
+$dark-orange : #512800;
+$light-orange : #fdf3e8;
+
+$yellow : #FFE045;
+$dark-yellow : #7A5A00;
+$lightest-yellow: #F9F1CF;
+$light-yellow : #EAD181;
+
+$green : #94D11E;
+$dark-green : #448E6E;
+$light-green : #8FE5BD;
+
+$doctor-teal: #00A69C;
+$nurse-teal: #7EC1BA;
+
+$cyan : #53CEF4;
+$light-cyan : #BBE8F2;
+$dark-teal : #004454;
+
+$blue  : #125972;
+$dark-blue : #0D5075;
+$light-blue : #8FC0E2;
+
+$purple : #A54187;
+$dark-purple : #490631;
+$light-purple : #D1B4CB;
+
+$brown : #998675;
+$dark-brown : #736357;
+$light-brown : #C7B299;
+$latte : #EFE3D5;
+
+$sparkeling: #F7F3EB;
+$deep-merlot: #350913;
+$chenin-blanc: #E5D9BE;
+$chardonnay: #DBBA77;
+$rose: #DDB8AC;
+$blush: #D6826B;
+
+$space-gray: #363636;
+
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+
+$primary:       $chardonnay;
+$secondary:     $chenin-blanc;
+$success:       $green;
+$info:          $blue;
+$warning:       $orange;
+$danger:        $red;
+$light:         $sparkeling;
+$dark:          $space-gray;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+  "chardonnay": $chardonnay,
+  "rose":       $rose,
+  "blush":      $blush,
+  "chenin-blanc": $chenin-blanc,
+  "burgundy":   $dark-red
+);
