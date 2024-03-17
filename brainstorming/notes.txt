@@ -1,0 +1,7 @@
+// Was the assignment easy, moderate, challenging, hard
+
+// Did the assignment contribute to my learning? Yes/no
+
+// Did I get a grade I expected on the assignment? Yes/no
+
+// How did I do? below avg, avg, above avg

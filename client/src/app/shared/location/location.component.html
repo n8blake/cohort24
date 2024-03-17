@@ -1,0 +1,12 @@
+<div *ngIf="!location && !initializingPosition">
+        No location information available.
+</div>
+<span *ngIf="location && !place">
+    Lat: {{location.latitude | number: '1.3'}} Long: {{location.longitude | number: '1.3'}}
+</span>
+<span *ngIf="place">
+    <i class="bi bi-geo-alt-fill"></i> {{place.name}}
+</span>
+<i class="text-secondary text-center" *ngIf="initializingPosition">
+    <i class="bi bi-brightness-high spin-animation"></i>
+</i>

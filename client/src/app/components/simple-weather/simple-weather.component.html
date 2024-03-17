@@ -1,0 +1,6 @@
+<div class="text-center">
+    <div class="m-4"><i class="fs-18">{{currentWeather?.asOf | date:'EEEE, MMM d, y'}}</i></div>
+    <div class="h1 font-sans-serif fw-lighter m-4">
+        {{currentWeather?.temperature! | temperature:"F-"}} <app-weather-icon [weather]="currentWeather?.conditionCode"></app-weather-icon>
+    </div>
+</div>

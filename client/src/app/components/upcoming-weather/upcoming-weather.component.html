@@ -1,0 +1,15 @@
+<div class="row m-1">
+    <div class="col font-sans-serif weather-daily-container text-center" *ngFor="let day of trimmedForecast">
+        <div class="">
+            {{day.forecastStart | date:"EEE" | uppercase}}
+        </div>
+        <div class="weather-icon-container pt-2">
+            <app-weather-icon [weather]="day.conditionCode"></app-weather-icon>
+        </div>
+        <hr>
+        <div class="">{{day.temperatureMax | temperature:"F-"}}</div>
+        <div class="text-secondary fw-lighter">
+            <small>{{day.temperatureMin | temperature:"F-"}}</small>
+        </div>
+    </div>
+</div>

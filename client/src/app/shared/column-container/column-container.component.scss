@@ -1,0 +1,33 @@
+.stylized-column {
+    background-color: #151515;
+    background-image: linear-gradient(rgba(25,25,25,0.5), rgba(53,53,53,0));
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(100%,#181818), color-stop(0%,#000)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #181818 0%,#000 100%); /* Chrome10+,Safari5.1+ */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 8pt;
+    border-radius: 4pt;
+    border: solid 1pt #252525;
+}
+
+h2 {
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.top-line {
+    width: 70%;
+    border: 0.5pt solid #DBBA77;
+}
+
+.side-line {
+    height: 70%;
+    border-left: 0.5pt solid #DBBA77;
+    position: absolute;
+}
+
+.title, .content {
+    // position: relative;
+    // left: 8pt;
+    // top: 4pt;
+}
