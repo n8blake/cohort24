@@ -6,7 +6,6 @@ const usersRoutes = require("./users");
 const protectedUserRoutes = require("./protectedUserRoutes");
 const authRoutes = require("./auth");
 const weatherRoutes = require("./weather");
-//const horoscopeRoutes = require("./horoscope");
 const locationRoutes = require("./location");
 
 // use routes
@@ -14,7 +13,6 @@ router.use("/auth", authRoutes);
 router.use("/users", usersRoutes);
 router.use("/weather", weatherRoutes);
 router.use("/location", locationRoutes);
-//router.use("/horoscope", horoscopeRoutes);
 
 // protected routes
 router.use("/getUsers", withAdminRole, protectedUserRoutes);
