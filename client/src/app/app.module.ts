@@ -7,6 +7,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalComponent } from './shared/modal/modal.component';
 import { BOOTSTRAP_TOKEN } from './utils/bootstrap.token';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
 
 declare let bootstrap: any;
 
@@ -14,7 +15,8 @@ declare let bootstrap: any;
   declarations: [
     AppComponent,
     HomePageComponent,
-    ModalComponent
+    ModalComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
