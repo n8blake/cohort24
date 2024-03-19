@@ -1,7 +1,9 @@
 const router = require("express").Router();
 const usersController = require("../../controllers/usersController");
 
-router.route("/").post(usersController.create);
+router.route("/")
+  .get(usersController.findAll)
+  .post(usersController.create);
 
 router.get("/currentIdentity", function (req, res) {
   if (req.session.userId) {
