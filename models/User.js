@@ -6,9 +6,17 @@ const UserSchema = new Schema({
     type: String,
     trim: true,
   },
+  preferredName: {
+    type: String,
+    trim: true,
+  },
   lastName: {
     type: String,
     trim: true,
+  },
+  imageUrl: {
+    type: String,
+    trim: true
   },
   hashedPassword: {
     type: String,
@@ -29,6 +37,10 @@ const UserSchema = new Schema({
   role: {
     type: String,
     default: "student"
+  }, 
+  requirePasswordReset: {
+    type: Boolean,
+    default: true
   }
 });
 
