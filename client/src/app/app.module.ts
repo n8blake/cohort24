@@ -9,6 +9,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalComponent } from './shared/modal/modal.component';
 import { BOOTSTRAP_TOKEN } from './utils/bootstrap.token';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { UserProfilePageComponent } from './pages/user-profile-page/user-profile-page.component';
+import { UsersListPageComponent } from './pages/users-list-page/users-list-page.component';
 
 declare let bootstrap: any;
 
@@ -17,7 +19,9 @@ declare let bootstrap: any;
     AppComponent,
     HomePageComponent,
     ModalComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    UserProfilePageComponent,
+    UsersListPageComponent
   ],
   imports: [
     BrowserModule,
