@@ -131,3 +131,5 @@ dist
 
 /keys
 .DS_Store
+
+/scripts/seedData.js
