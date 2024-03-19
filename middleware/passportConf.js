@@ -12,9 +12,11 @@ const localStrategy = new LocalStrategy(
     usernameField: "email",
   },
   function verify(username, password, cb) {
-    //console.log("finding user...");
     User.findOne({ email: username })
       .then((user) => {
+        if(!user){
+          return cb(null, user);
+        }
         crypto.pbkdf2(
           password,
           user.salt,
