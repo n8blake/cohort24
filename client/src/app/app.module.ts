@@ -11,6 +11,7 @@ import { BOOTSTRAP_TOKEN } from './utils/bootstrap.token';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { UserProfilePageComponent } from './pages/user-profile-page/user-profile-page.component';
 import { UsersListPageComponent } from './pages/users-list-page/users-list-page.component';
+import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 
 declare let bootstrap: any;
 
@@ -21,7 +22,8 @@ declare let bootstrap: any;
     ModalComponent,
     LoginPageComponent,
     UserProfilePageComponent,
-    UsersListPageComponent
+    UsersListPageComponent,
+    NotFoundPageComponent
   ],
   imports: [
     BrowserModule,

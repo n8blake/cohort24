@@ -33,7 +33,7 @@ export class LoginPageComponent implements OnInit {
         } else if(response._id) {
           this.authService.getCurrentIdentity().subscribe(identity => {
             if(response._id == identity._id){
-              this.router.navigate(['/users/profile', response._id]);
+              this.router.navigate(['/user', response._id]);
             } else {
               console.log("error when navigating");
               console.log(response);
