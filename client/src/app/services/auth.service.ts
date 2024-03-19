@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
 import { catchError, tap, Observable, of, Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { IUser } from '../user/user';
+import { IUser } from '../models/user.interface';
 @Injectable({
   providedIn: 'root',
 })
@@ -45,7 +45,7 @@ export class AuthService implements OnInit {
     const options = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     };
-
+    console.log(`attempting login`);
     return this.http
       .post(this.baseURL + '/api/auth/login/password', loginInfo, options)
       .pipe(
