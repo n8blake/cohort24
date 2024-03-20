@@ -1,16 +1,17 @@
 $enable-responsive-font-sizes: true;
 @import './theme-colors.scss';
-@import url("https://use.typekit.net/dux7ttf.css");
+//@import url("https://use.typekit.net/dux7ttf.css");
 
-body {
-  font-family: "darkmode-off-cc", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-
-}
-
-.font-sans-serif {
-  font-family: "darkmode-off-cc", sans-serif;
-}
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+
+// body {
+//   font-family: "darkmode-off-cc", sans-serif;
+//   font-weight: 400;
+//   font-style: normal;
+
+// }
+
+// .font-sans-serif {
+//   font-family: "darkmode-off-cc", sans-serif;
+// }

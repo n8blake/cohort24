@@ -15,6 +15,8 @@ import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.com
 import { HeaderComponent } from './components/header/header.component';
 import { LogoComponent } from './shared/logo/logo.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NavComponent } from './components/nav/nav.component';
+import { UsersListComponent } from './components/users-list/users-list.component';
 
 declare let bootstrap: any;
 
@@ -36,7 +38,9 @@ declare let bootstrap: any;
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    NavComponent,
+    UsersListComponent
   ],
   providers: [
     {provide: BOOTSTRAP_TOKEN, useValue: bootstrap}

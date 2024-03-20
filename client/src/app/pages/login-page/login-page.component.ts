@@ -24,6 +24,7 @@ export class LoginPageComponent implements OnInit {
   login(): void {
     console.log(this.email.value);
     console.log(this.password.value);
+    if(this.email && this.email.value && this.password && this.password.value){
     this.authService
       .loginUser(this.email.value, this.password.value)
       .subscribe((response) => {
@@ -42,6 +43,7 @@ export class LoginPageComponent implements OnInit {
           });
         }
       });
+    }
   }
 
 }

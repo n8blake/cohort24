@@ -24,7 +24,7 @@ export class UsersService {
         Authorization: `Bearer ${localStorage.getItem('token')}`,
       }),
     };
-    return this.http.get<IUser[]>(this.baseURL + '/api/getUsers/', options).pipe(catchError(this.handleError<IUser[]>('getUsers', [])));
+    return this.http.get<IUser[]>(this.baseURL + '/api/users/').pipe(catchError(this.handleError<IUser[]>('getUsers', [])));
   }
 
   getUser(userId: string): Observable<IUser> {

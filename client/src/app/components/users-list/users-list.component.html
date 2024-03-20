@@ -1,0 +1,6 @@
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let user of users">
+        <span *ngIf="user.preferredName">{{user.preferredName}}</span>
+        <span *ngIf="!user.preferredName">{{user.firstName}}</span> {{user.lastName}}
+    </li>
+</ul>
