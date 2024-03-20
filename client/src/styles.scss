@@ -1,6 +1,5 @@
 $enable-responsive-font-sizes: true;
 @import './theme-colors.scss';
-@import '../node_modules/bootstrap/scss/bootstrap';
 @import url("https://use.typekit.net/dux7ttf.css");
 
 body {
@@ -13,3 +12,5 @@ body {
 .font-sans-serif {
   font-family: "darkmode-off-cc", sans-serif;
 }
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';

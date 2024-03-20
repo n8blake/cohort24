@@ -14,6 +14,7 @@ import { UsersListPageComponent } from './pages/users-list-page/users-list-page.
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LogoComponent } from './shared/logo/logo.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 declare let bootstrap: any;
 
@@ -34,7 +35,8 @@ declare let bootstrap: any;
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [
     {provide: BOOTSTRAP_TOKEN, useValue: bootstrap}
