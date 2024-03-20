@@ -12,6 +12,8 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { UserProfilePageComponent } from './pages/user-profile-page/user-profile-page.component';
 import { UsersListPageComponent } from './pages/users-list-page/users-list-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
+import { HeaderComponent } from './components/header/header.component';
+import { LogoComponent } from './shared/logo/logo.component';
 
 declare let bootstrap: any;
 
@@ -21,9 +23,11 @@ declare let bootstrap: any;
     HomePageComponent,
     ModalComponent,
     LoginPageComponent,
+    LogoComponent,
     UserProfilePageComponent,
     UsersListPageComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
