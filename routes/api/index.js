@@ -7,8 +7,10 @@ const authRoutes = require("./auth");
 const weatherRoutes = require("./weather");
 const locationRoutes = require("./location");
 const coursesRoutes = require("./courses");
+const assignmentsRoutes = require("./assignments");
 
 // use routes
+router.use("/assignments", withToken, assignmentsRoutes);
 router.use("/auth", authRoutes);
 router.use("/courses", withToken, coursesRoutes);
 router.use("/users", usersRoutes);

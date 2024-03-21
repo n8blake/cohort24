@@ -1,0 +1,15 @@
+<div class="container my-2">
+    <h1>{{assignment?.name}}</h1>
+    <div [innerHTML]="assignment?.description">
+    </div>
+    <hr>
+    <div *ngIf="parsedElements && parsedElements.length > 0">
+        <div *ngFor="let element of parsedElements">
+            <span class="badge text-bg-info">{{element.apiReturnType}}</span>
+            <span>{{element.textContent}}</span>
+            <div>
+                {{element.apiEndpoint}}
+            </div>
+        </div>
+    </div>
+</div>

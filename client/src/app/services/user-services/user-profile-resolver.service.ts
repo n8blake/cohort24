@@ -10,8 +10,8 @@ export class UserProfileResolverService implements Resolve<unknown>{
   constructor(private usersService: UsersService) { }
 
   resolve(route: ActivatedRouteSnapshot): unknown {
-    console.log("getting user");
-    console.log(route.params['id'])
+    // console.log("getting user");
+    // console.log(route.params['id'])
     return this.usersService.getUser(route.params['id']);
   }
 

@@ -1,27 +1,31 @@
 <div class="container">
     <br>
-    <h4 class="text-secondary">Past Assignments</h4>
-    <hr>
-    <h1 class="text-primary">Upcoming Assignments</h1>
+    <!-- <h4 class="text-secondary">Past Assignments</h4>
+    <hr> -->
+    <h1 class="text-primary">Assignments</h1>
     <div>
-        <div class="card my-2">
-            <div class="card-body">
-                <div class="badge text-bg-info mb-2">
-                   EMBA 630 Data Modeling and Decisions
+        <div *ngFor="let assignment of assignments | orderBy: 'due_at'">
+            <a class="card my-2 text-decoration-none" *ngIf="dueLaterThanToday(assignment) && (assignment.points_possible || assignment.rubric_settings?.points_possible)" >
+                <div class="card-body" >
+                    <a [routerLink]="['/courses', assignment.course?.id]"><div class="badge text-bg-info mb-2">
+                       {{assignment.course?.course_code}}
+                    </div></a>
+                    <div class="d-flex justify-content-between">
+                        <a [routerLink]="['/courses', assignment.course_id, 'assignments', assignment.id]"><h5 class="card-title">{{assignment.name}}</h5></a>
+                        <div class="">{{assignment.due_at | date }}</div>
+                    </div>
+                    <div *ngIf="assignment.points_possible">
+                        Points possible: {{assignment.points_possible}}
+                    </div>
+                    <div *ngIf="assignment.rubric_settings">
+                        (Ruberic) Points possible: {{assignment.rubric_settings.points_possible}}
+                    </div>
+                    <!-- <div [innerHTML]="assignment.description"></div> -->
                 </div>
-                <div class="d-flex justify-content-between">
-                <h5 class="card-title">Assignment title</h5>
-                <div class="">{{today | date }}</div>
-                </div>
-            </div>
+            </a>
         </div>
-        <div class="card my-2">
-            <div class="card-body">
-                <div class="d-flex justify-content-between">
-                <h5 class="card-title">Assignment title</h5>
-                <div class="">{{nextWeek | date }}</div>
-                </div>
-            </div>
+        <div *ngIf="!assignments" class="h4 text-burgundy">
+            <i class="bi bi-hourglass-split"></i> Loading...
         </div>
     </div>
 </div>

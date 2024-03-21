@@ -25,7 +25,16 @@ export class CoursesService {
       }),
     };
     return this.http.get<ICourse[]>(this.baseURL + '/api/courses/', options).pipe(catchError(this.handleError<ICourse[]>('getCourses', [])));
+  }
 
+  getCourse(courseId: number): Observable<ICourse> {
+    const options = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
+      }),
+    };
+    return this.http.get<ICourse>(this.baseURL + '/api/courses/' + courseId, options).pipe(catchError(this.handleError<ICourse>('getCourse')));
   }
 
   private handleError<T>(operation = 'operation', result?: T) {

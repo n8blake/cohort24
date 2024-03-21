@@ -1,12 +1,13 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { ICourse } from 'src/app/models/course.interface';
 import { CoursesService } from 'src/app/services/course-services/courses.service';
 
 @Component({
   selector: 'app-courses-page',
   standalone: true,
-  imports: [NgFor, NgIf],
+  imports: [NgFor, NgIf, RouterLink],
   templateUrl: './courses-page.component.html',
   styleUrl: './courses-page.component.scss'
 })
