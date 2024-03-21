@@ -1,7 +1,7 @@
 const router = require("express").Router();
 
 const axios = require("axios");
-const makeToken = require("../../utils/TokenGenerator");
+const makeToken = require("../../utils/AppleTokenGenerator");
 
 router.route("/")
     .get(async function(req, res){

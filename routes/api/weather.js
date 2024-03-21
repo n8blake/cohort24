@@ -3,7 +3,7 @@ const weatherConroller = "";
 //const fetch = require("node-fetch");
 // const fetch = (...args) => import("node-fetch").then(({ default: fetch }) => fetch(...args));
 const axios = require("axios");
-const makeToken = require("../../utils/TokenGenerator");
+const makeToken = require("../../utils/AppleTokenGenerator");
 
 router.route("/")
     .get(async function(req, res){

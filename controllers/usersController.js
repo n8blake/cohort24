@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const User = require("../models/User");
 const crypto = require("crypto");
 const emailController = require("./emailController");
-const makeToken = require("../utils/TokenGenerator");
+const makeToken = require("../utils/AppleTokenGenerator");
 const jwt = require("jsonwebtoken");
 const generateEmail = require("../utils/EmailGenerator");
 // Define User REST Controls

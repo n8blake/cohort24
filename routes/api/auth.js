@@ -1,6 +1,6 @@
 const express = require("express");
 const passport = require("passport");
-const generateToken = require("../../utils/TokenGenerator");
+const generateUserToken = require("../../utils/TokenGenerator");
 // const crypto = require("crypto");
 // const User = require("../../models/User");
 const router = express.Router();
@@ -18,7 +18,7 @@ router.post(
         email: req.user.email,
         userCreated: req.user.userCreated,
         role: req.user.role,
-        token: generateToken({ id: req.session.passport.user.id }, 24)
+        token: generateUserToken(req.user._id)
       };
       req.session.userId = req.user._id;
       res.status(200).json(user);

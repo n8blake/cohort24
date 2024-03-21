@@ -7,9 +7,11 @@ const protectedUserRoutes = require("./protectedUserRoutes");
 const authRoutes = require("./auth");
 const weatherRoutes = require("./weather");
 const locationRoutes = require("./location");
+const coursesRoutes = require("./courses");
 
 // use routes
 router.use("/auth", authRoutes);
+router.use("/courses", withAdminRole, coursesRoutes);
 router.use("/users", usersRoutes);
 router.use("/weather", weatherRoutes);
 router.use("/location", locationRoutes);

@@ -1,5 +1,5 @@
 const generateEmail = require("../../utils/EmailGenerator");
-const generateToken = require("../../utils/TokenGenerator");
+const generateToken = require("../../utils/AppleTokenGenerator");
 const router = require("express").Router();
 
 // require routes files
