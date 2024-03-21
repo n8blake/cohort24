@@ -1,15 +1,19 @@
 const router = require("express").Router();
 const usersController = require("../../controllers/usersController");
+const passport = require("passport");
+const withToken = passport.authenticate("bearer");
 
 router.route("/")
   .get(usersController.findAll)
   .post(usersController.create);
 
-router.get("/currentIdentity", function (req, res) {
-  if (req.session.userId) {
-    req.params.id = req.session.userId;
+router.get("/currentIdentity", withToken, function (req, res) {
+  console.log(req);
+  if (req.session.user || req.user) {
+    req.params.id = req.session.user._id || req.user._id;
     return usersController.findById(req, res);
   } else {
+    console.log('unauthorized')
     res.status(401).send();
   }
 });

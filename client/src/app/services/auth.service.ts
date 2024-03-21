@@ -29,6 +29,10 @@ export class AuthService implements OnInit {
     } else {
       console.log('not yet logged in');
     }
+    this.checkAuthenticationStatus().subscribe(user => {
+      console.log('fetched')
+      this.currentUser = user;
+    })
   }
 
   changeUser(user: IUser): void {
@@ -100,6 +104,7 @@ export class AuthService implements OnInit {
   }
 
   checkAuthenticationStatus(): Observable<IUser> {
+    //console.log(localStorage.getItem('token') ? true : false)
     const options = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
@@ -108,7 +113,7 @@ export class AuthService implements OnInit {
     };
     return this.http.get(this.baseURL + '/api/auth/login', options).pipe(
       tap((data: any) => {
-        console.log(data.status);
+        //console.log(data.status);
         if (data) {
           if (data.token) {
             localStorage.setItem('token', data.token);
