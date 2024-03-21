@@ -4,11 +4,15 @@ import { HomePageComponent } from "./pages/home-page/home-page.component";
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { UsersListPageComponent } from './pages/users-list-page/users-list-page.component';
 import { UserProfilePageComponent } from './pages/user-profile-page/user-profile-page.component';
-import { UserRouteActivatorService } from './services/user-route-activator.service';
-import { UserProfileResolverService } from './services/user-profile-resolver.service';
+import { UserRouteActivatorService } from './services/user-services/user-route-activator.service';
+import { UserProfileResolverService } from './services/user-services/user-profile-resolver.service';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
+import { AssignmentsPageComponent } from './pages/assignments-page/assignments-page.component';
+import { CoursesPageComponent } from './pages/courses-page/courses-page.component';
 
 const routes: Routes = [
+  { path: "assignments", component: AssignmentsPageComponent },
+  { path: "courses", component: CoursesPageComponent },
   { path: "home", component: HomePageComponent },
   { path: "login", component: LoginPageComponent },
   { path: "users", component: UsersListPageComponent },
